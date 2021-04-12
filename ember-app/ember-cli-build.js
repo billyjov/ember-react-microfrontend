@@ -6,6 +6,8 @@ module.exports = function (defaults) {
   let app = new EmberApp(defaults, {
     // Add options here
   });
+  app.import('node_modules/bootstrap/dist/css/bootstrap.min.css');
+  app.import('node_modules/material-icons/iconfont/material-icons.css');
 
   // Use `app.import` to add additional libraries to the generated
   // output files.
