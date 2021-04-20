@@ -22,7 +22,7 @@
     "test": "npm-run-all lint test:*",
     "test:ember": "ember test",
     "build": "ember build",
-    "copy:bundles": "copyfiles -f dist/assets/{vendor,ember-app}.js ../react-app/public/ember-app/",
+    "copy:bundles": "copyfiles -f dist/assets/{vendor,ember-app}.js dist/assets/{vendor,ember-app}.css ../react-app/public/ember-app/",
     "build:ember": "npm run build && npm run copy:bundles"
   },
   "devDependencies": {
