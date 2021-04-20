@@ -11,6 +11,7 @@ export default class App extends Application {
   Resolver = Resolver;
 
   // needed for custom elements.
+  // TODO: use environment variables to deal with this.
   autoboot = false;
 }
 
