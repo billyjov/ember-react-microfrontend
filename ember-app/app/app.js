@@ -4,7 +4,7 @@ import loadInitializers from 'ember-load-initializers';
 import config from 'ember-app/config/environment';
 import { customElement } from 'ember-custom-elements';
 
-@customElement('ember-app-list')
+@customElement('ember-app-list', { useShadowRoot: true })
 export default class App extends Application {
   modulePrefix = config.modulePrefix;
   podModulePrefix = config.podModulePrefix;
