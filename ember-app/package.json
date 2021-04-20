@@ -11,7 +11,7 @@
     "test": "tests"
   },
   "scripts": {
-    "build": "ember build --environment=production",
+    "build:prod": "ember build --environment=production",
     "lint": "npm-run-all --aggregate-output --continue-on-error --parallel 'lint:!(fix)'",
     "lint:fix": "npm-run-all --aggregate-output --continue-on-error --parallel lint:*:fix",
     "lint:hbs": "ember-template-lint .",
@@ -20,7 +20,10 @@
     "lint:js:fix": "eslint . --fix",
     "start": "ember serve",
     "test": "npm-run-all lint test:*",
-    "test:ember": "ember test"
+    "test:ember": "ember test",
+    "build": "ember build",
+    "copy:bundles": "copyfiles -f dist/assets/{vendor,ember-app}.js ../react-app/public/ember-app/",
+    "build:ember": "npm run build && npm run copy:bundles"
   },
   "devDependencies": {
     "@ember/optional-features": "^2.0.0",
@@ -29,6 +32,7 @@
     "@glimmer/tracking": "^1.0.3",
     "babel-eslint": "^10.1.0",
     "broccoli-asset-rev": "^3.0.0",
+    "copyfiles": "^2.4.1",
     "ember-auto-import": "^1.10.1",
     "ember-cli": "~3.25.3",
     "ember-cli-app-version": "^4.0.0",
@@ -49,7 +53,6 @@
     "ember-resolver": "^8.0.2",
     "ember-source": "~3.25.1",
     "ember-template-lint": "^2.18.1",
-    "ember-web-component-container": "^0.1.5",
     "ember-welcome-page": "^4.0.0",
     "eslint": "^7.20.0",
     "eslint-config-prettier": "^7.2.0",
