@@ -6,6 +6,31 @@ module.exports = function (defaults) {
   let app = new EmberApp(defaults, {
     // Add options here
     storeConfigInMeta: false,
+
+    'emberCliConcat': {
+      enabled: true,
+      outputDir: 'assets',
+      outputFileName: 'billy',
+      // useSelfClosingTags: false,
+      // wrapScriptsInFunction: false,
+      // treeTypes: ['all'],
+
+      js: {
+        concat: true,
+        contentFor: 'concat-js',
+        // footer: null,
+        // header: null,
+        // preserveOriginal: true,
+      },
+
+      css: {
+        concat: true,
+        contentFor: 'concat-css',
+        // footer: null,
+        // header: null,
+        // preserveOriginal: true,
+      },
+    },
   });
   app.import('node_modules/bootstrap/dist/css/bootstrap.min.css');
 

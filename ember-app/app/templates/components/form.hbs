@@ -1,0 +1,100 @@
+{{yield}}
+<div class="container">
+  <div class="card mt-3">
+    <div class="card-header bg-info text-white text-center">
+      <img class="logo"
+        src="https://emberjs.com/images/brand/ember-tomster-lockup-4c.svg"
+        alt="logo">
+      <h4 class="text-uppercase">Add new task to your todo list :)</h4>
+    </div>
+    <div class="card-body">
+      <form>
+        <div class="form-row">
+          <div class="form-group col-lg-8">
+            <label for="title">Title</label>
+            <input type="text" class="form-control"
+              placeholder="enter your task title">
+            <div class="invalid-feedback">
+              Please enter a task title.
+            </div>
+          </div>
+          <div class="form-group col-lg-4">
+            <label for="dueDate">Due date</label>
+            <input type="date" id="dueDate" class="form-control">
+          </div>
+        </div>
+        <button class="btn btn-outline-info" type="button">
+          Create task
+        </button>
+        {{!-- Test: {{ this.test }} --}}
+        <button class="btn btn-outline-primary" type="button" {{on "click"
+          this.logout}}>
+          {{!-- <button class="btn btn-outline-primary" type="button"> --}}
+            Test Event Emitter
+          </button>
+          {{!-- <a class="btn btn-outline-success" type="button"
+            href="/landscapes">
+            Go to landscape
+          </a> --}}
+          {{!-- <LinkTo @route="landscapes" class="btn btn-outline-success">
+            Go to landscape
+          </LinkTo> --}}
+          {{!-- <a href="{{href-to 'landscapes' preventDefault=true}}">Go Home
+            landscape</a> --}}
+          {{!-- <a href="{{on "click" this.logout preventDefault=false}}">Go Home
+            landscape</a> --}}
+          {{!-- <a class="btn btn-outline-success" type="button"
+            href="/landscapes">
+            Go to landscape
+          </a> --}}
+          {{!-- <a class="btn btn-outline-primary" type="button"> --}}
+      </form>
+    </div>
+  </div>
+
+  <!-- list -->
+
+  <div class="mt-5">
+    <table class="table table-striped table-dark">
+      <thead>
+        <tr>
+          <th>Mark as done</th>
+          <th>Title</th>
+          <th>Due Date</th>
+          <th>Created At</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input">
+              <label class="custom-control-label"></label>
+            </div>
+          </td>
+          <td>test</td>
+          <td>test</td>
+          <td>test</td>
+          <td>
+            <button class="btn btn-info">
+              Edit
+            </button>
+          </td>
+          <td>
+            <button class="btn btn-danger">
+              Remove
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="alert alert-primary d-flex">
+      <i class="material-icons mr-2">mood</i>
+      <span>
+        There are no tasks yet. Please add new tasks using the form
+        above.
+      </span>
+    </div>
+  </div>
+
+</div>
