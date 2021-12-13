@@ -25,7 +25,7 @@
     "copy:bundles": "copyfiles -f dist/assets/billy.js dist/assets/billy.css ../react-app/public/ember-app/",
     "copy:bundles2": "copyfiles -f dist/assets/billy.js dist/assets/billy.css ../ember-app-host/public/assets/ember-wc/",
     "copy:bundles3": "copyfiles -f dist/assets/billy.js dist/assets/billy.css ../ng-app/src/assets/ember-app/",
-    "build:ember": "npm run build && npm run copy:bundles",
+    "build:ember": "npm run build:prod && npm run copy:bundles",
     "build:ember2": "npm run build && npm run copy:bundles2",
     "build:ember3": "npm run build && npm run copy:bundles3"
   },

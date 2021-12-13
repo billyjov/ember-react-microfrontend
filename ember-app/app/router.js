@@ -9,4 +9,8 @@ export default class Router extends EmberRouter {
 Router.map(function () {
   this.route('list');
   this.route('landscapes');
+  this.route('mfe2/a');
+  this.route('mfe1/a');
+  this.route('mfe1/b');
+  this.route('mfe2/b');
 });
